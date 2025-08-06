@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const BookingSchema = mongoose.Schema ({
+const EventSchema = mongoose.Schema ({
     name:{
         type: String,
-        required: [true, "Please Enter Your Name"]
+        required: [true, "Enter Event Name"]
     },
     date: {
         type: Date,
@@ -23,5 +23,5 @@ const BookingSchema = mongoose.Schema ({
 }
 );
 
-const Booking = mongoose.model("Event", BookingSchema);
+const Booking = mongoose.model("Event", EventSchema);
 module.exports = Booking;

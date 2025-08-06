@@ -1,6 +1,15 @@
 const Booking = require('../models/Booking');
 const Event = require('../models/schema');
 
+exports.viewBooking = async (req, res) => {
+  try {
+    const bookings = await Booking.find({ user: req.user._id }).populate('event');
+    res.json(bookings);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+ 
 exports.bookEvent = async (req, res) => {
   try {
     const event = await Event.findById(req.params.eventId);

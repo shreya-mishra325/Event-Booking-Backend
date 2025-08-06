@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const genToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1d' });
 
-exports.register = async (req, res) => {
+exports.register = async (req,res) => {
   try {
     const { name, email, password, role } = req.body;
     if (await User.findOne({ email })) return res.status(400).json({ message: "Email in use" });
