@@ -74,6 +74,7 @@ Response will contain a JWT token; copy it.
 
 ### 3️⃣ Send Authenticated Requests
 For protected routes, send this header:
+
 `Authorization: Bearer your_jwt_token`
 
 ### 4️⃣ View All Events
@@ -83,19 +84,27 @@ Returns a list of all available events.
 
 ### 5️⃣ Book an Event
 **POST** `/api/bookings/:eventId`
+
 Headers:
-`Authorization: Bearer your_jwt_token
-Content-Type: application/json`
+
+`Authorization: Bearer your_jwt_token`
+
+`Content-Type: application/json`
 
 ### 6️⃣ View Your Bookings
 **GET** `/api/bookings`  
+
 Headers:
+
 `Authorization: Bearer your_jwt_token`
 
 ### 7️⃣ Cancel a Booking
 **DELETE** `/api/bookings/:eventId`
+
 Headers:
+
 `Authorization: Bearer your_jwt_token`
+
 
 ## 🌍 Deployment
 This API is deployed on Render:
