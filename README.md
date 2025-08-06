@@ -28,7 +28,7 @@ Admins can create, update, and delete events.
 ## 🔑 API Endpoints
 
 ### **Auth**
-| Method | Endpoint              | Description         | Auth |
+| Method | Endpoint              | Description         | Auth Required |
 |--------|-----------------------|---------------------|------|
 | POST   | `/api/auth/register`  | Register new user   | ❌   |
 | POST   | `/api/auth/login`     | Login user          | ❌   |
@@ -36,7 +36,7 @@ Admins can create, update, and delete events.
 ---
 
 ### **Events**
-| Method | Endpoint           | Description             | Auth       |
+| Method | Endpoint           | Description             | Auth Required |       
 |--------|--------------------|-------------------------|------------|
 | GET    | `/api/event`       | View all events         | ❌         |
 | POST   | `/api/event`       | Create event (admin)    | ✅ Admin   |
@@ -46,7 +46,7 @@ Admins can create, update, and delete events.
 ---
 
 ### **Bookings**
-| Method | Endpoint                  | Description         | Auth |
+| Method | Endpoint                  | Description         | Auth Required |
 |--------|---------------------------|---------------------|------|
 | GET    | `/api/bookings`           | View bookings       | ✅   |
 | POST   | `/api/bookings/:eventId`  | Book an event       | ✅   |
