@@ -23,5 +23,9 @@ mongoose.connect(url)
 .catch(() => console.log('Connection failed'));
 
 
+app.get('/', (req, res) => {
+  res.send('Event Booking API built succesfully!');
+});
+
 const port = process.env.PORT;
 app.listen(port || 3000, () => console.log(`server running at http://localhost:${port || 3000}`));
