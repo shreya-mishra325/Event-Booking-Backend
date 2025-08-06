@@ -49,7 +49,7 @@ Admins can create, update, and delete events.
 
 ## 📌 How to Use
 
-### 1️⃣ Register a User
+### 1️⃣ Register as User
 **POST** `/api/auth/register`  
 Body (JSON):
 ```json
@@ -70,19 +70,37 @@ Body (JSON):
   "password": "123456"
 }
 ```
-Response will contain a JWT token.
+Response will contain a JWT token; copy it.
 
 ### 3️⃣ Send Authenticated Requests
 For protected routes, send this header:
-```json
-Authorization: Bearer your_jwt_token
-```
+`Authorization: Bearer your_jwt_token`
 
+### 4️⃣ View All Events
+**GET** `/api/event`  
+(No authentication required)  
+Returns a list of all available events.  
+
+### 5️⃣ Book an Event
+**POST** `/api/bookings/:eventId`
+Headers:
+`Authorization: Bearer your_jwt_token
+Content-Type: application/json`
+
+### 6️⃣ View Your Bookings
+**GET** `/api/bookings`  
+Headers:
+`Authorization: Bearer your_jwt_token`
+
+### 7️⃣ Cancel a Booking
+**DELETE** `/api/bookings/:eventId`
+Headers:
+`Authorization: Bearer your_jwt_token`
 
 ## 🌍 Deployment
 This API is deployed on Render:
 https://event-booking-backend-nc92.onrender.com
 
-For example, to get all events:
+To get all events:
 https://event-booking-backend-nc92.onrender.com/api/event
 
