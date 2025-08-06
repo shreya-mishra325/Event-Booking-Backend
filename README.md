@@ -6,6 +6,12 @@ Admins can create, update, and delete events.
 
 **Hosted API:** [https://event-booking-backend-nc92.onrender.com](https://event-booking-backend-nc92.onrender.com)
 
+### 🛠 Tech Stack
+- Backend: Node.js, Express.js
+- Database: MongoDB with Mongoose
+- Auth: JWT, bcryptjs
+- Validation & Middleware: Custom middlewares for auth & admin control
+
 ---
 
 ## 🚀 Features
