@@ -30,15 +30,15 @@ Admins can create, update, and delete events.
 ### **Auth**
 | Method | Endpoint              | Description         | Auth Required |
 |--------|-----------------------|---------------------|------|
-| POST   | `/api/auth/register`  | Register new user   | ❌   |
-| POST   | `/api/auth/login`     | Login user          | ❌   |
+| POST   | `/api/auth/register`  | Register new user   | ❌ No  |
+| POST   | `/api/auth/login`     | Login user          | ❌ No  |
 
 ---
 
 ### **Events**
 | Method | Endpoint           | Description             | Auth Required |       
 |--------|--------------------|-------------------------|------------|
-| GET    | `/api/event`       | View all events         | ❌         |
+| GET    | `/api/event`       | View all events         | ❌ No        |
 | POST   | `/api/event`       | Create event (admin)    | ✅ Admin   |
 | PUT    | `/api/event/:id`   | Update event (admin)    | ✅ Admin   |
 | DELETE | `/api/event/:id`   | Delete event (admin)    | ✅ Admin   |
@@ -48,9 +48,9 @@ Admins can create, update, and delete events.
 ### **Bookings**
 | Method | Endpoint                  | Description         | Auth Required |
 |--------|---------------------------|---------------------|------|
-| GET    | `/api/bookings`           | View bookings       | ✅   |
-| POST   | `/api/bookings/:eventId`  | Book an event       | ✅   |
-| DELETE | `/api/bookings/:eventId`  | Cancel booking      | ✅   |
+| GET    | `/api/bookings`           | View bookings       | ✅ Yes   |
+| POST   | `/api/bookings/:eventId`  | Book an event       | ✅ Yes  |
+| DELETE | `/api/bookings/:eventId`  | Cancel booking      | ✅ Yes  |
 
 ---
 
