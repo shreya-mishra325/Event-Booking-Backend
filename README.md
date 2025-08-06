@@ -42,6 +42,7 @@ Admins can create, update, and delete events.
 ### **Bookings**
 | Method | Endpoint                  | Description         | Auth |
 |--------|---------------------------|---------------------|------|
+| GET    | `/api/bookings`           | View bookings       | ✅   |
 | POST   | `/api/bookings/:eventId`  | Book an event       | ✅   |
 | DELETE | `/api/bookings/:eventId`  | Cancel booking      | ✅   |
 
@@ -51,7 +52,8 @@ Admins can create, update, and delete events.
 
 ### 1️⃣ Register as User
 **POST** `/api/auth/register`  
-Body (JSON):
+
+Body (JSON):  
 ```json
 {
   "name": "John Doe",
@@ -59,51 +61,81 @@ Body (JSON):
   "password": "123456",
   "role": "user"
 }
-```
+````
+
+---
 
 ### 2️⃣ Login
-**POST** `/api/auth/login`  
+
+**POST** `/api/auth/login`
+
 Body (JSON):
+
 ```json
 {
   "email": "john@example.com",
   "password": "123456"
 }
 ```
+
 Response will contain a JWT token; copy it.
 
+---
 
 ### 3️⃣ Send Authenticated Requests
+
 For protected routes, send this header:
 
-`Authorization: Bearer your_jwt_token`
+```
+Authorization: Bearer your_jwt_token
+```
 
+---
 
 ### 4️⃣ View All Events
-**GET** `/api/event`  
-(No authentication required)  
-Returns a list of all available events.  
 
+**GET** `/api/event`
+
+(No authentication required)
+
+Returns a list of all available events.
+
+---
 
 ### 5️⃣ Book an Event
+
 **POST** `/api/bookings/:eventId`
 
 Headers:
-`Authorization: Bearer your_jwt_token`␣␣`Content-Type: application/json`
 
+```
+Authorization: Bearer your_jwt_token  
+Content-Type: application/json
+```
+
+---
 
 ### 6️⃣ View Your Bookings
-**GET** `/api/bookings`  
 
-Headers:␣␣
-`Authorization: Bearer your_jwt_token`
+**GET** `/api/bookings`
 
+Headers:
+
+```
+Authorization: Bearer your_jwt_token
+```
+
+---
 
 ### 7️⃣ Cancel a Booking
+
 **DELETE** `/api/bookings/:eventId`
 
 Headers:
-`Authorization: Bearer your_jwt_token`
+
+```
+Authorization: Bearer your_jwt_token
+```
 
 ---
 
