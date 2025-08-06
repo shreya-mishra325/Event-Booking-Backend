@@ -86,25 +86,22 @@ Returns a list of all available events.
 **POST** `/api/bookings/:eventId`
 
 Headers:
-
 `Authorization: Bearer your_jwt_token`
-
 `Content-Type: application/json`
 
 ### 6️⃣ View Your Bookings
 **GET** `/api/bookings`  
 
 Headers:
-
 `Authorization: Bearer your_jwt_token`
 
 ### 7️⃣ Cancel a Booking
 **DELETE** `/api/bookings/:eventId`
 
 Headers:
-
 `Authorization: Bearer your_jwt_token`
 
+---
 
 ## 🌍 Deployment
 This API is deployed on Render:
